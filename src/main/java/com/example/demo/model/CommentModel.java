@@ -10,4 +10,5 @@ public class CommentModel {
     private String author;
     private String comment;
     private LocalDateTime date;
+
 }
