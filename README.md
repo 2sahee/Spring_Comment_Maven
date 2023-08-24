@@ -15,8 +15,8 @@
 <br>
 
 📅<2023-8-24>📅<br>
-1.댓글 작성(작성자/ 댓글내용입력) 등록 기능 구현
-2.댓글목록 - db 연동
-3.댓글 목록 삭제 기능 구현
+1.댓글 작성(작성자/ 댓글내용입력) 등록 기능 구현<br>
+2.댓글목록 - db 연동<br>
+3.댓글 목록 삭제 기능 구현<br>
 <br>
 <img width="921" alt="image" src="https://github.com/2sahee/Spring_Comment_Maven/assets/119823052/41900dec-5771-4a91-bbc6-03f33f0faea5">
