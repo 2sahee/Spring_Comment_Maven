@@ -18,3 +18,18 @@
 3.댓글 목록 삭제 기능 구현<br>
 <br>
 <img width="921" alt="image" src="https://github.com/2sahee/Spring_Comment_Maven/assets/119823052/41900dec-5771-4a91-bbc6-03f33f0faea5">
+<br>
+
+------------
+### 📅<2023-8-25>📅<br>
+1.MySQL DB 사용자 추가 / 권한 부여 <br><br>
+<img width="274" alt="image" src="https://github.com/2sahee/Spring_Comment_Maven/assets/119823052/1f80b54e-454b-4492-a159-729df2bb1eea"><br><br>
+2.댓글 수정 기능 구현 <br><br>
+<img width="1301" alt="image" src="https://github.com/2sahee/Spring_Comment_Maven/assets/119823052/b34c62f0-09c9-4cf6-8a5c-e91b925ecac5"> <br><br>
+<댓글 수정 페이지>
+<img width="1285" alt="image" src="https://github.com/2sahee/Spring_Comment_Maven/assets/119823052/a999099a-e8d3-4b86-81ec-286179a242d3"> <br><br>
+3.RestAPI 학습<br><br>
+<img width="828" alt="image" src="https://github.com/2sahee/Spring_Comment_Maven/assets/119823052/6fda09fa-6155-42b0-882b-88621362d45a">
+
+
+
