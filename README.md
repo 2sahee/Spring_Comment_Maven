@@ -8,8 +8,8 @@
 4.DataBase자료 조회하기 (Model 생성과 DB연결)
 
 <br>
-<img width="371" alt="image" src="https://github.com/2sahee/Spring_Maven_Comment/assets/119823052/a1f99b66-3929-4799-b678-f7701c818ace">
-<br>
+<img src='<a href="https://ibb.co/5s782nM"><img src="https://i.ibb.co/vLtPDQw/2023-08-25-154604.png" alt="2023-08-25-154604" border="0"></a> width="60%","height="40%">
+
 
 ------------
 ### 📅<2023-8-24>📅<br>
