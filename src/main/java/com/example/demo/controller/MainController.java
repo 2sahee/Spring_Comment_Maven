@@ -1,52 +1,64 @@
 package com.example.demo.controller;
-
-import com.example.demo.dao.CommentDAO;
-import com.example.demo.dao.CommentJdbcDAO;
 import com.example.demo.model.CommentModel;
+import com.example.demo.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.sql.SQLOutput;
 import java.util.List;
+
+
 
 @Controller
 public class MainController {
 
     @Autowired
-    private CommentJdbcDAO commentJdbcDAO;
+    private CommentService commentService;
 
-    @Autowired
-    private CommentDAO commentDAO;
-
+    //댓글목록화면
     @GetMapping("/")
     public String hello(@RequestParam(value = "name", defaultValue = "") String name, Model model) {
 
-        //List<Map<String, ?>> commentList = commentJdbcDAO.selectAllCommentList();
-
-        List<CommentModel> cmList = commentDAO.selectAllComment();
-
-        model.addAttribute("commentList", cmList);
+        List<CommentModel> cmList = commentService.getAllCommentList();
+        model.addAttribute("commentList", cmList); // 댓글리스트를 View로 전달한다.
 
         return "main";
     }
 
+    //댓글 등록 처리
     @PostMapping("/comments")
     public String createComment(CommentModel commentModel) {
 
-        System.out.println(commentModel.getAuthor());
-        System.out.println(commentModel.getComment());
-
-        commentDAO.insertComment(commentModel);
+        commentService.createComment(commentModel);
 
         return "redirect:/";
     }
 
+    //댓글 삭제 처리
     @DeleteMapping("/comments/{no}")
     public String deleteComment(@PathVariable int no) {
 
-        commentDAO.deleteComment(no);
+        commentService.deleteComment(no);
+
+        return "redirect:/";
+    }
+
+    //댓글 수정 화면 요청 처리
+    @GetMapping("/comments/{no}")
+    public String modifyCommentForm(@PathVariable int no, Model model) {
+
+        CommentModel comment = commentService.getComment(no);
+        model.addAttribute("comment", comment);
+
+        return "comment-form";
+
+    }
+
+    @PostMapping("/comments/{no}")
+    public String modifyComment(@PathVariable int no, CommentModel commentModel) {
+        // 댓글 정보 update 처리
+        commentModel.setNo(no);
+        commentService.updateComment(commentModel);
 
         return "redirect:/";
     }

@@ -11,7 +11,11 @@ import java.util.List;
 public interface CommentDAO {
    List<CommentModel> selectAllComment();
 
+   CommentModel selectComment(@Param("no") int no);
+
    void insertComment(CommentModel comment);
 
    void deleteComment(@Param("no") int no);
+
+   void updateComment(CommentModel comment);
 }
