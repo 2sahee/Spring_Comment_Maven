@@ -29,5 +29,8 @@
 3.RestAPI 학습<br><br>
 <a href="https://ibb.co/5s782nM"><img src="https://i.ibb.co/vLtPDQw/2023-08-25-154604.png" alt="2023-08-25-154604" border="0"></a>
 
-
-
+------------
+### 📅<2023-8-31>📅<br>
+1. 상단 navbar 일괄 적용 (navbar.html 파일 + 타임리프 <nav th:insert="~{navbar :: navbar}"></nav> 활용) 
+2. 댓글 수정 / 삭제 API <br><br>
+<img width="1126" alt="스크린샷 2023-08-31 200528" src="https://github.com/2sahee/Spring_Comment_Maven/assets/119823052/ec0d3c96-9905-4237-a367-b13fccf8e253"><br><br><br>
