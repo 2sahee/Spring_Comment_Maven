@@ -3,6 +3,7 @@ import com.example.demo.dao.CommentDAO;
 import com.example.demo.model.CommentModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,15 +23,20 @@ public class CommentService {
         return commentDAO.selectAllComment();
     }
 
-    public void  createComment(CommentModel commentModel) {
+    //댓글 등록
+    public CommentModel createComment(CommentModel commentModel) {
         commentDAO.insertComment(commentModel);
+        return getComment(commentModel.getNo());
     }
 
-    public void updateComment(CommentModel commentModel) {
+    //댓글 수정
+    public CommentModel updateComment(CommentModel commentModel) {
         commentDAO.updateComment(commentModel);
+        return getComment(commentModel.getNo());
     }
 
-    public void  deleteComment(int no) {
+    //댓글 삭제
+    public void deleteComment(int no) {
         commentDAO.deleteComment(no);
     }
 }
